@@ -47,19 +47,27 @@ body {
     left: 1000px;
     top: 380px;
 }
-/* .start {
-    animation: block 2.5s linear infinite;
-} */
+#block3 {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: absolute;
+    left: 1000px;
+    top: 380px;
+}
+.start {
+    animation: block 2.5s linear;
+}
 @keyframes jump {
     0%{top: 350px;}
     30%{top: 290px;}
     40%{top: 290px;}
     100%{top: 350px;}
 }
-/* @keyframes block {
-    0%{left: 980px;}
+@keyframes block {
+    0%{left: 1020px;}
     100%{left: -40px;}
-} */
+}
 @keyframes duck {
     0%{top: 350px;}
     30%{top: 385px;}
