@@ -37,7 +37,7 @@ function randomizerBlock() {
 // Randomize position of block spawn
 var blockPosition1 =  0;
 function randomizerPosition() {
-    blockPosition = Math.floor(Math.random()*550 + 400);
+    blockPosition = Math.floor(Math.random()*450 + 500);
     blockPosition1 = blockPosition;
 }
 // test game start
@@ -50,6 +50,8 @@ function test1 (){
 function createBlock(e) {
     switch (e) {
         case 1:
+            road.style.animation = 'none'
+            road.style.animation = `road ${level}s linear infinite`
             block1.style.animation = `block ${level}s linear`
             block1.onanimationend = () => {
                 score += 100; 
@@ -60,6 +62,8 @@ function createBlock(e) {
             break;
         case 2:
             randomizerPosition();
+            road.style.animation = 'none'
+            road.style.animation = `road ${level}s linear infinite`
             block1.style.animation = `block ${level}s linear`
             block1.onanimationend = () => {
                 score += 100; 
@@ -78,6 +82,8 @@ function createBlock(e) {
             break;
         case 3:
             randomizerPosition();
+            road.style.animation = 'none'
+            road.style.animation = `road ${level}s linear infinite`
             block1.style.animation = `block ${level}s linear`
             block1.onanimationend = () => {
                 score += 100; 
@@ -118,6 +124,8 @@ var checkLose = setInterval(()=>{
         block1.style.display = 'none';
         block2.style.display = 'none';
         block3.style.display = 'none';
+        road.style.animation = 'none';
+        blockNumber1 = -1;
         startBtn.style.display = '';
         if (score > recordGame) {
             let record1;
@@ -135,7 +143,6 @@ var checkLose = setInterval(()=>{
         score = 0;
         scoreP.innerHTML = `Score: ${score}`;
         level = 3;
-        road.style.animation = 'none'
     }
 })
 
